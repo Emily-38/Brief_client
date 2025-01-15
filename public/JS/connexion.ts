@@ -1,6 +1,7 @@
 let submit = document.getElementById('submit');
 
 let url: string = 'src/page/todo.html';
+let error_msg: string = '';
 
 if (submit) {
     submit.addEventListener('click', () => {
@@ -10,7 +11,7 @@ if (submit) {
         if (checkEmail) {
             let email: string = checkEmail.value;
             if(!email) {
-                console.log('Email est vide');
+                error_msg += 'Email est vide \n';
             }
             else {
                 console.log('Email:', email);
@@ -23,7 +24,7 @@ if (submit) {
         if (checkPassword) {
             let password: string = checkPassword.value;
             if(!password) {
-                console.log('password est vide');
+                error_msg += 'password est vide \n';
             }
             else {
                 console.log('Mot de passe:', password);
@@ -33,7 +34,12 @@ if (submit) {
             console.error('Champ mot de passe introuvable');
         }
 
-        location.href = url;
+        if(error_msg === "") {
+            location.href = url;
+        }
+        else {
+            console.log(error_msg);
+        }
 
     });
 }
