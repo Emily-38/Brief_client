@@ -1,10 +1,11 @@
 let submit = document.getElementById('submit');
 
 let url: string = 'src/page/todo.html';
-let error_msg: string = '';
+
 
 if (submit) {
     submit.addEventListener('click', () => {
+        let error_msg: string = '';
         let checkEmail = document.getElementById('email') as HTMLInputElement | null;
         let checkPassword = document.getElementById('password') as HTMLInputElement | null;
 
