@@ -1,13 +1,24 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion ToDo</title>
+    <link rel="stylesheet" href="/public/Styles/index.css" />
+    <script src="/public/JS/connexion.ts" defer></script>
+</head>
+<body>
+
+    <img src="/public/Img/Logo.jpeg" alt="logo client" class="logo">
+    <div class="champs">
+        <p class="intitule">E-mail</p>
+        <input type="email" name="email" id="email" class="champs">
+    </div>
+    <div class="champs">
+        <p class="intitule">Mot de passe</p>
+        <input type="password" name="password" id="password" class="champs">
+    </div>
+    <input type="submit" value="Envoyer" class="submit" id="submit">
+
+</body>
 </html>
